@@ -1,0 +1,428 @@
+.container{
+    width: 722px;
+    margin: auto;
+    position: relative;
+}
+
+.timeline_container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    margin-top: 15px;
+}
+.timeline_container .timeline {
+    position: relative;
+    height: 95px;
+    overflow: hidden;
+}
+.timeline_container .timeline .hour_ticks {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    z-index: 2;
+}
+.timeline_container .timeline .hour_ticks div {
+    position: absolute;
+    display: inline-block;
+    width: 2px;
+    height: 8px;
+    border-left: 1px solid #999;
+}
+.timeline_container .timeline .hour_ticks div.even {
+    height: 5px;
+}
+.timeline_container .timeline .hour_ticks div.second {
+    height: 8px;
+}
+.timeline_container .timeline .hours {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+.timeline_container .timeline .hours .hour {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+}
+.timeline_container .timeline .hours .hour div {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 80px;
+    left: -40px;
+    text-align: center;
+    font-family: 'Oswald', "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
+    font-size: 14px;
+    color: #222;
+}
+.timeline_container .timeline .hours .hour.first div {
+    text-align: left;
+    left: 0;
+}
+.timeline_container .timeline .stripes {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+.timeline_container .timeline .stripes > div {
+    position: relative;
+    float: left;
+    height: 100%;
+    color: #fff;
+    white-space: nowrap;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 10px;
+}
+.timeline_container .timeline .stripes > div > div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 3px;
+    line-height: 40px;
+    font-size: 13px;
+    opacity: 0.9;
+    font-family: 'Oswald', "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.timeline_container .timeline .stripes > div > div.clear {
+    color: rgba(0, 0, 0, 0.7);
+}
+.desktop .timeline_container .timeline .stripes > div,
+.iphone .timeline_container .timeline .stripes > div {
+    background-color: rgba(147, 147, 147, 0.07);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0.05)), to(rgba(0, 0, 0, 0.1)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+    background-repeat: repeat-x;
+}
+/* Clear */
+.timeline_container .timeline .stripes > div.c0 {
+    background-color: #EEEEF5;
+    color: #333;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+.timeline_container .timeline .stripes > div.p0 {
+    background-color: #EEEEF5;
+    color: #333;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+/* Sprinkling / Flurries */
+.timeline_container .timeline .stripes > div.p1 {
+    background-color: #96b4da;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+}
+/* Partly Cloudy / Light Rain */
+.timeline_container .timeline .stripes > div.c1 {
+    background-color: #d5dae2;
+    color: #333;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+.timeline_container .timeline .stripes > div.p2 {
+    background-color: #80a5d6;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+}
+/* Cloudy / Rain */
+.timeline_container .timeline .stripes > div.c2 {
+    background-color: #b6bfcb;
+    color: #222;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+.timeline_container .timeline .stripes > div.p3 {
+    background-color: #4a80c7;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* Heavy Rain */
+.timeline_container .timeline .stripes > div.p4 {
+    background-color: #3267ad;
+}
+.timeline_container .timeline .stripes > div.p5 {
+    background-color: #3267ad;
+}
+.timeline_container .timeline .temps {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 100%;
+}
+.timeline_container .timeline .temps > div {
+    position: absolute;
+}
+.timeline_container .timeline .temps > div > div {
+    position: absolute;
+    top: 0;
+    font-family: 'Oswald', "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
+    font-size: 14px;
+    color: #374d71;
+    width: 50px;
+    left: -13px;
+    text-align: center;
+}
+.timeline_container .timeline .temps > div.first > div {
+    text-align: left;
+    left: 0;
+}
+.timeline_container .timeline .now {
+    position: absolute;
+    top: 44px;
+    z-index: 4;
+    width: 2px;
+    height: 51px;
+    background-color: #F00;
+    opacity: 0.5;
+}
+.timeline_container .timeline.hide_now .now {
+    display: none;
+}
+
+
+.time #main {
+    width: 100%;
+}
+#time_machine {
+    font-size: 16px;
+}
+#time_machine .overview {
+    width: 718px;
+    margin: 30px auto 30px;
+    text-align: left;
+    font-family: 'Oswald', "AvenirNextCondensed-Medium", "AvenirNextLTW01-MediumC 721311", "Arial Narrow", Verdana, sans-serif;
+    border: 1px solid transparent;
+    text-shadow: 2px 2px 0 #FFF;
+}
+#time_machine .overview .back {
+    text-align: center;
+    color: #D15549;
+    margin-bottom: 20px;
+}
+#time_machine .overview .back a {
+    text-transform: uppercase;
+    color: #D15549;
+    text-decoration: none;
+}
+#time_machine .overview .back a:hover {
+    text-decoration: underline;
+}
+#time_machine .overview .day_time {
+    text-transform: uppercase;
+    text-align: center;
+}
+#time_machine .overview .day_time .val {
+    display: inline-block;
+    margin: 0 25px;
+    font-size: 36px;
+}
+#time_machine .overview .day_time .prev,
+#time_machine .overview .day_time .next {
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    padding: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+#time_machine .overview .day_time .prev:hover,
+#time_machine .overview .day_time .next:hover {
+    color: #3267ad;
+}
+#time_machine .overview .day_summary {
+    position: relative;
+    left: 10px;
+    width: 500px;
+    margin: 15px auto 0;
+    line-height: 1.5em;
+    font-size: 22px;
+    font-family: 'Oswald', "AvenirNextCondensed-Regular", "AvenirNextLTW01-Condens 721299", "Arial Narrow", Verdana, sans-serif;
+    font-weight: 400;
+}
+#time_machine .overview .beta_note {
+    position: relative;
+    left: 10px;
+    width: 500px;
+    margin: 25px auto 0;
+    font-size: 14px;
+    font-family: 'Oswald', "AvenirNextCondensed-Regular", "AvenirNextLTW01-Condens 721299", "Arial Narrow", Verdana, sans-serif;
+    font-weight: 400;
+    color: #888;
+}
+#time_machine .overview .beta_note a {
+    color: #D15549;
+}
+#time_machine .timeline_container {
+    /*width: 718px;*/
+    margin: 0 auto;
+    overflow: visible;
+}
+#time_machine .timeline_container .timeline {
+    overflow: visible;
+    border: 1px solid #DDD;
+    background-color: #f8f8f8;
+    background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#eeeeee));
+    background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+    background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+    background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+    background-repeat: repeat-x;
+    height: 105px;
+}
+#time_machine .slider {
+    z-index: 9;
+    position: absolute;
+    width: 718px;
+    height: 130px;
+    top: -12px;
+    cursor: pointer;
+    overflow: visible;
+}
+#time_machine .handle {
+    z-index: 9;
+    position: absolute;
+    width: 60px;
+    margin-left: -30px;
+    height: 100%;
+    outline: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.05);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.05));
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0.08)), to(rgba(0, 0, 0, 0.05)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.05));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.05));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.05));
+    background-repeat: repeat-x;
+    border: 2px solid #444;
+    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35), inset 0 0 10px #ffffff;
+    -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35), inset 0 0 10px #ffffff;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35), inset 0 0 10px #ffffff;
+}
+#time_machine.far_future .slider {
+    height: 95px;
+}
+#time_machine .slider_details {
+    position: relative;
+    left: -1px;
+    margin: 10px auto 20px;
+    border: 1px solid transparent;
+    color: #222;
+    width: 800px;
+}
+#time_machine .slider_details > .inner {
+    width: 100%;
+    margin: 25px auto 25px;
+    opacity: 0.99;
+}
+#time_machine .slider_details table {
+    margin: 4px auto 0;
+    text-align: center;
+    width: 100%;
+}
+#time_machine .slider_details table thead {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#time_machine .slider_details table tbody .val {
+    font-family: 'Oswald', "AvenirNextCondensed-Bold", "AvenirNextLTW01-BoldCn", "Arial Narrow", Verdana, sans-serif;
+    font-size: 22px;
+}
+#time_machine .slider_details table tbody .error {
+    font-size: 16px;
+}
+#time_machine .slider_details table td {
+    width: 115px;
+    line-height: 25px;
+}
+#time_machine .slider_details .time {
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Oswald', "AvenirNextCondensed-Bold", "AvenirNextLTW01-BoldCn", "Arial Narrow", Verdana, sans-serif;
+}
+#time_machine .slider_details .summary {
+    text-align: center;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 10px;
+}
+#time_machine.far_future .timeline_container .labels,
+#time_machine.far_future .timeline .stripes {
+    display: none;
+}
+#time_machine.far_future .timeline_container .timeline {
+    height: 68px;
+}
+#time_machine.far_future .timeline_container .temps {
+    top: 8px;
+}
+#time_machine.far_future .timeline_container .hours {
+    top: 54px;
+}
+#time_machine.far_future .timeline_container .timeline .hour_ticks div.even {
+    display: none;
+}
+
+
+#forecastDetails table{
+    width: 721px;
+    margin: 20px auto;
+    border: 1px solid #374d71;
+}
+
+#forecastDetails table th{
+    text-align: center;
+    color: #fff;
+    border: 1px solid #374d71;
+    background: #374d71;
+    text-size: 10px;
+    font-weight: bold;
+    height: 40px;
+}
+
+.summaryTimeMachine{
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+#forecastDetails table td{
+    text-align: center;
+    text-size: 10px;
+    font-weight: normal;
+    color: #374d71;
+    height: 40px
+}
+
+#time_machine .summary-wrap{
+    width: 638px;
+    padding: 6px 10px;
+    float: left;
+}
+
+#time_machine .dateTimeMachine{
+    margin-bottom: 8px;
+    width: 102px;
+}
+
+.ui-widget-header{
+    background: none;
+}
+
+#ui-datepicker-div{
+    background: #fff !important;
+    z-index: 1000 !important;
+}
+
+.ui-widget-content{
+    background: none;
+    border: none;
+}
