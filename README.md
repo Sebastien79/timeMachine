@@ -10,7 +10,7 @@ For more details please see https://developer.forecast.io/docs/v2
 SEE A DEMO HERE
 http://timemachine.sebastiengiroux.com/
 
-![alt tag](https://raw.github.com/Sebastien79/timeMachine/demo.jpg)
+![alt tag](https://github.com/Sebastien79/timeMachine/blob/master/demo.jpg)
 
 Instructions:
 
