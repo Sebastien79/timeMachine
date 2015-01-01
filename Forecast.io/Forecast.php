@@ -211,7 +211,7 @@ class Forecast
                                 $.each( val['address_components'],function(i, val) {
                                     if (val['types'] == "locality,political") {
                                         if (val['long_name']!="") {
-                                            $('#city').html(val['long_name']);
+                                            $('#city').html(val['long_name'] + ' // <?php echo date('Y-m-d', $this->date24)?>');
                                         }
                                         else {
                                             $('#city').html("Where are you?");
@@ -528,7 +528,7 @@ class Forecast
                 if(sliderPos != 24){
                     setTimeout(function(){
                         loadAsyncTimeMachine(timeItems48, actualTime);
-                    },200);
+                    },500);
                 }
             }
 

@@ -1,10 +1,10 @@
 <?php
 /**
- * Created With JetBrains PhpStorm.
- * Creator: Sebastien Giroux
+ * Created by JetBrains PhpStorm.
+ * User: Sebastien
  * Date: 26/11/14
  * Time: 8:19 PM
- *
+ * To change this template use File | Settings | File Templates.
  *
  *
  * This plugin is based on America/New_York timezone whit an offset of -5
@@ -15,12 +15,14 @@
  *
  */
 
+date_default_timezone_set('America/New_York');
+
 require_once('Forecast.io/Forecast.php');
 
 use Forecast\Forecast;
 
 // Forecast API
-define('FORECASTIO_API_KEY', 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+define('FORECASTIO_API_KEY', '7612050acd5d54a54682bd6c26f2ba30');
 
 $lat = '40.7056258';
 $long = '-73.97968';
