@@ -11,7 +11,7 @@ namespace Forecast;
 
 class Forecast
 {
-    const API_REQUEST_PATH = 'https://api.forecast.io/forecast/';
+    const API_REQUEST_PATH = 'https://api.darksky.net/forecast/';
     private $api_key;
     private $lat;
     private $long;

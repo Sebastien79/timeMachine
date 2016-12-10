@@ -8,13 +8,13 @@ You can specify timezone and offset inside $optionsFr / $optionsEn vars
 For more details please see https://developer.forecast.io/docs/v2
 
 SEE A DEMO HERE
-http://timemachine.sebastiengiroux.com/
+http://time.snippetjs.com
 
 ![alt tag](https://github.com/Sebastien79/timeMachine/blob/master/demo.jpg)
 
 Instructions:
 
-1- ) Go to https://developer.forecast.io/register and register an account to obtain an API Key.
+1- ) Go to https://developer.darksky.net/forecast/register and register an account to obtain an API Key.
 
 2- ) Inside index.php replace the ...XXXX... with your key.
 
